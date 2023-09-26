@@ -373,6 +373,7 @@ function DraggableFlatListInner<T>(props: DraggableFlatListProps<T>) {
         onHandlerStateChange={onPanStateChange}
         onGestureEvent={onPanGestureEvent}
         simultaneousHandlers={props.simultaneousHandlers}
+        enabled={false}
         {...dynamicProps}
       >
         <Animated.View
