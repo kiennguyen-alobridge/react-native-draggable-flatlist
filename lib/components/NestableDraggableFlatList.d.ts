@@ -22,6 +22,7 @@ export declare const NestableDraggableFlatList: <T>(
     | "activationDistance"
     | "dragItemOverflow"
     | "outerScrollOffset"
+    | "enabledPanGestureHandler"
     | "containerStyle"
     | "onDragBegin"
     | "onPlaceholderIndexChange"
@@ -81,6 +82,7 @@ export declare const NestableDraggableFlatList: <T>(
           touchInit: Animated.Value<number>;
         }) => void)
       | undefined;
+    enabledPanGestureHandler?: boolean | undefined;
   } & Partial<
       Readonly<{
         autoscrollThreshold: number;
@@ -93,6 +95,7 @@ export declare const NestableDraggableFlatList: <T>(
         activationDistance: number;
         dragItemOverflow: boolean;
         outerScrollOffset: Animated.Value<number>;
+        enabledPanGestureHandler: boolean;
       }>
     > & {
       ref?: React.ForwardedRef<FlatList<T>> | undefined;

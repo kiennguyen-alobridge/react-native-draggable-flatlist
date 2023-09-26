@@ -25,6 +25,7 @@ export const DEFAULT_PROPS = {
   activationDistance: 0,
   dragItemOverflow: false,
   outerScrollOffset: new Animated.Value<number>(0),
+  enabledPanGestureHandler: true,
 };
 
 export const isIOS = Platform.OS === "ios";

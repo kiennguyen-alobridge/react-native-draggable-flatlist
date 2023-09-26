@@ -23,6 +23,7 @@ declare const _default: <T>(
     | "activationDistance"
     | "dragItemOverflow"
     | "outerScrollOffset"
+    | "enabledPanGestureHandler"
     | "containerStyle"
     | "onDragBegin"
     | "onPlaceholderIndexChange"
@@ -80,6 +81,7 @@ declare const _default: <T>(
           touchInit: Animated.Value<number>;
         }) => void)
       | undefined;
+    enabledPanGestureHandler?: boolean | undefined;
   } & Partial<
       Readonly<{
         autoscrollThreshold: number;
@@ -92,6 +94,7 @@ declare const _default: <T>(
         activationDistance: number;
         dragItemOverflow: boolean;
         outerScrollOffset: Animated.Value<number>;
+        enabledPanGestureHandler: boolean;
       }>
     > & {
       ref?: React.ForwardedRef<FlatList<T>> | undefined;

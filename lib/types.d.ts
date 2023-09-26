@@ -33,6 +33,7 @@ export declare type DraggableFlatListProps<T> = Modify<
     simultaneousHandlers?: React.Ref<any> | React.Ref<any>[];
     outerScrollOffset?: Animated.Node<number>;
     onAnimValInit?: (animVals: ReturnType<typeof useAnimatedValues>) => void;
+    enabledPanGestureHandler?: boolean;
   } & Partial<DefaultProps>
 >;
 export declare type RenderPlaceholder<T> = (params: {

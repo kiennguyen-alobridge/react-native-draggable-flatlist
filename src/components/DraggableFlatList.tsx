@@ -91,6 +91,7 @@ function DraggableFlatListInner<T>(props: DraggableFlatListProps<T>) {
     dragHitSlop = DEFAULT_PROPS.dragHitSlop,
     scrollEnabled = DEFAULT_PROPS.scrollEnabled,
     activationDistance: activationDistanceProp = DEFAULT_PROPS.activationDistance,
+    enabledPanGestureHandler = DEFAULT_PROPS.enabledPanGestureHandler,
   } = props;
 
   const [activeKey, setActiveKey] = useState<string | null>(null);
@@ -373,7 +374,7 @@ function DraggableFlatListInner<T>(props: DraggableFlatListProps<T>) {
         onHandlerStateChange={onPanStateChange}
         onGestureEvent={onPanGestureEvent}
         simultaneousHandlers={props.simultaneousHandlers}
-        enabled={false}
+        enabled={enabledPanGestureHandler}
         {...dynamicProps}
       >
         <Animated.View
